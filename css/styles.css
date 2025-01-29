@@ -1,1 +1,148 @@
-/*Ini File CSS */
+/* Reset Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* BMI Box */
+.bmi-box, .info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    min-width: 320px;
+}
+
+/* Form */
+.form-group {
+    margin: 10px 0;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hitung {
+    background: #28a745;
+}
+
+.hitung:hover {
+    background: #218838;
+}
+
+.reset {
+    background: #dc3545;
+}
+
+.reset:hover {
+    background: #c82333;
+}
+
+/* Result Box */
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for BMI Value */
+#bmi-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styling for BMI Category */
+#bmi-category {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Styling for Advice Text */
+#bmi-advice {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Styling for Age Advice */
+#usia-advice {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Info Box */
+.info-box ul {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.info-box ul li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.underweight { color: #ff9933; }
+.normal { color: #28a745; }
+.overweight { color: #ffcc00; }
+.obese { color: #dc3545; }
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+}
