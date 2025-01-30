@@ -1,19 +1,16 @@
-/* Reset Style */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Style */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    background: linear-gradient(to right, #ffd1dc, #e0bbe4); /* Background warna pink pastel dan lilac */
     text-align: center;
     padding: 20px;
 }
 
-/* Header */
 header {
     background: white;
     padding: 20px;
@@ -21,7 +18,10 @@ header {
     margin-bottom: 20px;
 }
 
-/* Main Container */
+header h1 {
+    color: #ff6f91; /* Warna teks penting */
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -29,30 +29,32 @@ header {
     gap: 20px;
 }
 
-/* BMI Box */
-.bmi-box, .info-box {
+.bmi-box, .info-box, .feature-box, .disease-box {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    min-width: 320px;
+    width: 100%;
+    max-width: 600px;
 }
 
-/* Form */
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
 .form-group {
     margin: 10px 0;
     text-align: left;
 }
 
-input {
+input, select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Buttons */
 .btn {
     padding: 10px;
     border: none;
@@ -79,7 +81,23 @@ input {
     background: #c82333;
 }
 
-/* Result Box */
+.download {
+    background: #17a2b8;
+}
+
+.download:hover {
+    background: #138496;
+}
+
+.consult {
+    background: #ffc107;
+    color: #333;
+}
+
+.consult:hover {
+    background: #e0a800;
+}
+
 .result {
     margin-top: 20px;
     font-size: 18px;
@@ -88,61 +106,80 @@ input {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-/* Styling for BMI Value */
 #bmi-value {
     font-size: 32px;
     font-weight: bold;
-    color: #333;
+    color: #ff6f91; /* Warna teks penting */
     margin-bottom: 10px;
 }
 
-/* Styling for BMI Category */
 #bmi-category {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-/* Styling for Advice Text */
-#bmi-advice {
+#bmi-advice, #usia-advice {
     font-size: 18px;
     color: #555;
     text-align: center;
     margin-top: 10px;
 }
 
-/* Styling for Age Advice */
-#usia-advice {
-    font-size: 18px;
-    color: #666;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Info Box */
-.info-box ul {
+.info-box ul, .feature-box ul, .disease-box ul {
     text-align: left;
     margin-top: 10px;
 }
 
-.info-box ul li {
-    margin: 5px 0;
-    font-size: 16px;
+/* Styling untuk .button-group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.underweight { color: #ff9933; }
-.normal { color: #28a745; }
-.overweight { color: #ffcc00; }
-.obese { color: #dc3545; }
+.button-group .btn {
+    flex: 1;
+}
 
-/* Footer */
+/* Highlight warna pada teks BMI */
+.underweight {
+    color: #3498db; /* Biru */
+}
+
+.normal {
+    color: #2ecc71; /* Hijau */
+}
+
+.overweight {
+    color: #f1c40f; /* Kuning */
+}
+
+.obese {
+    color: #e74c3c; /* Merah */
+}
+
 footer {
     margin-top: 20px;
     padding: 10px;
     background: white;
     border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .bmi-box, .info-box, .feature-box, .disease-box {
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
