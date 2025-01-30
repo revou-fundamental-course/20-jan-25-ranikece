@@ -5,21 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Test - Cek Berat Badan Ideal</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Tambahkan library untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ujNIlb0ZFeHCkog1Fel6kMLQVzJlzGf5z9ZkzRaL+OHlhaczRae7xJMnZBaov/hc" crossorigin="anonymous" />
+    <!-- Tambahkan library untuk download PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <h1>⋆｡˚୨ Kalkulator BMI ୧˚｡⋆</h1>
-        <p>Cek apakah berat badanmu ideal atau perlu perhatian lebih! </p>
+        <p>Cek apakah berat badanmu ideal atau perlu perhatian lebih.ᐟ </p>
     </header>
 
-    <!-- Main Container -->
     <main class="container">
+
+        <!-- Bagian keunggulan fitur -->
+        <section class="feature-box">
+            <h2>Keunggulan Fitur Kami</h2>
+            <ul>
+                <li>Pengecekan BMI yang akurat dan cepat ٩(◕‿◕｡)۶</li>
+                <li>Rekomendasi personal berdasarkan usia dan gender ( ˶ˆᗜˆ˵ )</li>
+                <li>Konsultasi mudah ke Halodoc langsung dari aplikasi ૮ ˶ᵔ ᵕ ᵔ˶ ა</li>
+                <li>Informasi lengkap tentang kesehatan dan tips berguna (≧◡≦)</li>
+            </ul>
+        </section>
+
         <section class="bmi-box">
             <h2>Hitung BMI Kamu ּ ๋࣭⭑ </h2>
             <form id="bmi-form">
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="" disabled selected>Pilih gender kamu</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <label for="berat">Berat Badan (kg):</label>
                     <input type="number" id="berat" placeholder="Masukkan berat badan kamu" required>
@@ -44,23 +67,40 @@
                 <p id="bmi-value">-</p>
                 <p id="bmi-category">-</p>
                 <p id="bmi-advice">Masukkan data & hitung untuk melihat hasil.</p>
-                <p id="usia-advice">-</p> <!-- Rekomendasi berdasarkan usia -->
+                <p id="usia-advice">-</p>
+                <!-- Tombol download dan konsultasi dijadikan sampingan -->
+                <div class="button-group">
+                    <button id="download-btn" class="btn download">Download Hasil <i class="fas fa-download"></i></button>
+                    <button id="consult-btn" class="btn consult">Konsultasi ke Halodoc <i class="fas fa-stethoscope"></i></button>
+                </div>
             </div>
         </section>
 
         <section class="info-box">
             <h2>Kenapa BMI Itu Penting?</h2>
-            <p>BMI (Body Mass Index) digunakan untuk melihat apakah berat badanmu sudah ideal atau belum. Berikut kategorinya:</p>
+            <p>BMI (Body Mass Index) digunakan untuk melihat apakah berat badanmu sudah ideal atau belum.</p>
             <ul>
-                <li><span class="underweight">BMI &lt; 18.5:</span> Berat kurang, perlu tambahan nutrisi (╥﹏╥) </li>
-                <li><span class="normal">18.5 - 24.9:</span> Berat ideal, pertahankan pola sehat! (๑>◡<๑) </li>
-                <li><span class="overweight">25 - 29.9:</span> Berat berlebih, coba atur pola makan & olahraga ₍^. .^₎ </li>
-                <li><span class="obese">≥ 30:</span> Obesitas, segera konsultasi dengan ahli kesehatan (◞‸ ◟) </li>
+                <li><span class="underweight">BMI &lt; 18.5:</span> Berat kurang, perlu tambahan nutrisi ( ˶ˆᗜˆ˵ ) </li>
+                <li><span class="normal">18.5 - 24.9:</span> Berat ideal, pertahankan pola sehat (˶˃ ᵕ ˂˶) .ᐟ.ᐟ </li>
+                <li><span class="overweight">25 - 29.9:</span> Berat berlebih, coba atur pola makan & olahraga (๑>◡<๑) </li>
+                <li><span class="obese">≥ 30:</span> Obesitas, segera konsultasi dengan ahli kesehatan ꩜_꩜ </li>
             </ul>
         </section>
+
+        <!-- Bagian penyakit terkait kegemukan -->
+        <section class="disease-box">
+            <h2>Penyakit Terkait Kegemukan</h2>
+            <ul>
+                <li>Diabetes Tipe 2</li>
+                <li>Penyakit Jantung</li>
+                <li>Tekanan Darah Tinggi</li>
+                <li>Stroke</li>
+                <li>Gangguan Tidur</li>
+            </ul>
+        </section>
+
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 Dibuat oleh Rani</p>
     </footer>
